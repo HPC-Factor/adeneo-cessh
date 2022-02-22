@@ -1,0 +1,28 @@
+# Copyright (c) Microsoft Corporation.  All rights reserved.
+# Use of this source code is subject to the terms of the Microsoft end-user
+# license agreement (EULA) under which you licensed this SOFTWARE PRODUCT.
+# If you did not accept the terms of the EULA, you are not authorized to use
+# this source code. For a copy of the EULA, please see the LICENSE.RTF on your
+# install media.
+
+
+!include "..\SSL.cmn"
+
+TARGETNAME=ssl_ec
+
+SOURCES= \
+		ec_lib.c\
+		ecp_smpl.c\
+		ecp_mont.c\
+		ecp_nist.c\
+		ec_cvt.c\
+		ec_mult.c\
+		ec_err.c\
+		ec_curve.c\
+		ec_check.c\
+		ec_print.c\
+		ec_asn1.c\
+		ec_key.c\
+		ec2_smpl.c\
+		ec2_mult.c\
+

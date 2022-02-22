@@ -1,0 +1,73 @@
+!include "..\..\SSH.cmn"
+
+TARGETNAME=LIBEAY32
+
+SOURCES= 
+
+RELEASETYPE=PLATFORM
+TARGETTYPE=DYNLINK
+
+DEFFILE=LIBEAY32.def
+DLLENTRY=DllMain
+
+INCLUDES=
+			
+
+TARGETLIBS= \
+  $(_COMMONSDKROOT)\lib\$(_CPUINDPATH)\coredll.lib \
+  $(_COMMONSDKROOT)\lib\$(_CPUINDPATH)\ws2.lib \
+  $(SSHCOMPAT_LIB) \
+  $(BSDCOMPAT_LIB) \
+  
+
+SOURCELIBS= \
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_aes.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_asn1.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_bf.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_bio.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_bn.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_buffer.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_cast.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_comp.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_conf.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_des.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_dh.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_dsa.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_dso.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_ec.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_ecdh.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_ecdsa.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_engine.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_err.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_evp.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_hmac.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_idea.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_krb5.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_lhash.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_md2.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_md4.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_md5.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_misc.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_objects.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_ocsp.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_pem.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_pkcs12.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_pkcs7.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_pqueue.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_rand.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_rc2.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_rc4.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_ripemd.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_rsa.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_sha.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_stack.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_store.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_txt_db.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_x509.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_x509v3.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_ui.lib\
+$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\ssl_engines.lib
+
+
+
+FILE_VIEW_RESOURCE_FOLDER = LIBEAY32.def
