@@ -1,0 +1,41 @@
+# Copyright (c) Microsoft Corporation.  All rights reserved.
+# Use of this source code is subject to the terms of the Microsoft end-user
+# license agreement (EULA) under which you licensed this SOFTWARE PRODUCT.
+# If you did not accept the terms of the EULA, you are not authorized to use
+# this source code. For a copy of the EULA, please see the LICENSE.RTF on your
+# install media.
+
+
+
+!include "..\SSL.cmn"
+
+TARGETNAME=ssl_des
+
+SOURCES= \
+		set_key.c\
+		ecb_enc.c\
+		cbc_enc.c\
+		ecb3_enc.c\
+		cfb64enc.c\
+		cfb64ede.c\
+		cfb_enc.c\
+		ofb64ede.c\
+		enc_read.c\
+		enc_writ.c\
+		ofb64enc.c\
+		ofb_enc.c\
+		str2key.c\
+		pcbc_enc.c\
+		qud_cksm.c\
+		rand_key.c\
+		des_enc.c\
+		fcrypt_b.c\
+		fcrypt.c\
+		xcbc_enc.c\
+		rpc_enc.c\
+		cbc_cksm.c\
+		ede_cbcm_enc.c\
+		des_old.c\
+		des_old2.c\
+		read2pwd.c\
+				
