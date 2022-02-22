@@ -1,0 +1,35 @@
+# Copyright (c) Microsoft Corporation.  All rights reserved.
+# Use of this source code is subject to the terms of the Microsoft end-user
+# license agreement (EULA) under which you licensed this SOFTWARE PRODUCT.
+# If you did not accept the terms of the EULA, you are not authorized to use
+# this source code. For a copy of the EULA, please see the LICENSE.RTF on your
+# install media.
+# 
+#  Copyright  1999 Intel Corp.
+# 
+
+TARGETNAME=SocketToFile
+RELEASETYPE=PLATFORM
+TARGETTYPE=DYNLINK
+TARGETLIBS= \
+  $(_COMMONSDKROOT)\lib\$(_CPUINDPATH)\coredll.lib \
+  $(_PROJECTROOT)\cesysgen\sdk\lib\$(_CPUINDPATH)\ws2.lib \
+
+DEFFILE=SocketToFile.def
+PREPROCESSDEFFILE=1
+DLLENTRY=DllEntry
+
+INCLUDES = $(INCLUDES) ; .\includes
+
+SOURCES= \
+  SSHDevice.c
+
+#------------------------------------------------------------------------------
+# IDE display files
+#------------------------------------------------------------------------------
+FILE_VIEW_RESOURCE_FOLDER= \
+  SocketToFile.def
+
+FILE_VIEW_INCLUDES_FOLDER= \
+  SSHDevice.h \
+  SSHDevice_DbgZones.h\  
