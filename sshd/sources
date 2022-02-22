@@ -1,0 +1,92 @@
+!include "..\SSH.cmn"
+
+
+TARGETNAME=sshd
+FILE_VIEW_ROOT_FOLDER= \
+  ReadMe.txt \
+  StdAfx.cpp \
+
+FILE_VIEW_RESOURCE_FOLDER= \
+
+FILE_VIEW_INCLUDES_FOLDER= \
+  StdAfx.h \
+  include\ssh2.h
+
+SOURCES= \
+	sshmain.cpp \
+	sshd.c \
+	servconf.c \
+	mac.c \
+	cipher.c \
+	xmalloc.c \
+	misc.c \
+	buffer.c \
+	cipher-ctr.c \
+	cipher-3des1.c \
+	cipher-acss.c \
+	cipher-aes.c \
+	cipher-bf1.c \
+	acss.c\
+	channels.c\
+	crc32.c\
+	compress.c\
+	packet.c \
+	deattack.c \
+	match.c \
+	compat.c \
+	nchan.c \
+	bufaux.c \
+	canohost.c \
+	cleanup.c \
+	kex.c \
+	dispatch.c \
+	key.c \
+	uuencode.c \
+	rsa.c \
+	ssh-rsa.c \
+	ssh-dss.c \
+	authfile.c \
+	atomicio.c \
+	socket.c \
+	auth2.c \
+	kexgexs.c \
+	kexdhs.c \
+	auth2-hostbased.c \
+	auth2-kbdint.c \
+	auth2-none.c \
+	auth2-passwd.c \
+	auth2-pubkey.c \
+	auth2-chall.c \
+	auth2-gss.c \
+	auth-rhosts.c \
+	auth-options.c \
+	kexgex.c \
+	dh.c \
+	kexdh.c \
+	hostfile.c \
+	session.c \
+	serverloop.c \
+	SocketToFile.c \
+	threadlocal.c \
+	path.c
+	
+
+
+RELEASETYPE=PLATFORM
+TARGETTYPE=PROGRAM
+PRECOMPILED_CXX=1
+EXEENTRY=mainWCRTStartup
+PRECOMPILED_PCH=StdAfx.pch
+
+TARGETLIBS= \
+  $(_PROJECTROOT)\cesysgen\sdk\lib\$(_CPUINDPATH)\ws2.lib \
+  $(_PROJECTROOT)\cesysgen\sdk\lib\$(_CPUINDPATH)\authhlp.lib \
+  $(BSDCOMPAT_LIB) \
+  $(SSHCOMPAT_LIB) \
+  $(SSL_LIB) \
+  $(ZLIB_LIB) \
+  $(_PROJECTROOT)\cesysgen\sdk\lib\$(_CPUINDPATH)\coredll.lib \
+  $(_PUBLICROOT)\common\oak\lib\$(_CPUINDPATH)\Fmtmsg.lib
+  
+PRECOMPILED_OBJ=StdAfx.obj
+PRECOMPILED_INCLUDE=StdAfx.h  
