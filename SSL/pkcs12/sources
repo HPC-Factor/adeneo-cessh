@@ -1,0 +1,30 @@
+# Copyright (c) Microsoft Corporation.  All rights reserved.
+# Use of this source code is subject to the terms of the Microsoft end-user
+# license agreement (EULA) under which you licensed this SOFTWARE PRODUCT.
+# If you did not accept the terms of the EULA, you are not authorized to use
+# this source code. For a copy of the EULA, please see the LICENSE.RTF on your
+# install media.
+
+
+
+!include "..\SSL.cmn"
+
+TARGETNAME=ssl_pkcs12
+
+SOURCES= \
+	p12_add.c\
+	p12_asn.c\
+	p12_attr.c\
+	p12_crpt.c\
+	p12_crt.c\
+	p12_decr.c\
+	p12_init.c\
+	p12_key.c\
+	p12_kiss.c\
+	p12_mutl.c\
+	p12_utl.c\
+	p12_npas.c\
+	pk12err.c\
+	p12_p8d.c\
+	p12_p8e.c\
+			
