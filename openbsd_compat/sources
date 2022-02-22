@@ -1,0 +1,41 @@
+!include "..\SSH.cmn"
+
+TARGETNAME=OpenBSDCompat
+
+SOURCES= \
+	dllmain.cpp	\
+  	bsd-snprintf.c \
+	vis.c \
+	openssl-compat.c \
+	strsep.c \
+	strlcpy.c \
+	strtonum.c \
+	strtoll.c \
+	bsd-asprintf.c \
+	strlcat.c \
+	bsd-arc4random.c \
+	fatal.c \
+	log.c \
+	fake-rfc2553.c\
+	inet_aton.c\
+	inet_ntop.c \
+	base64.c \
+	strmode.c \
+	getopt.c
+
+RELEASETYPE=PLATFORM
+TARGETTYPE=DYNLINK
+
+DEFFILE=OpenBSDCompat.def
+DLLENTRY=DllMain
+
+
+
+TARGETLIBS= \
+  $(_COMMONSDKROOT)\lib\$(_CPUINDPATH)\coredll.lib \
+  $(SSL_LIB) \
+  $(SSHCOMPAT_LIB) \
+  $(_PROJECTROOT)\cesysgen\sdk\lib\$(_CPUINDPATH)\ws2.lib \
+
+
+FILE_VIEW_RESOURCE_FOLDER = OpenBSDCompat.def

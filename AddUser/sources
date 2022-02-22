@@ -1,0 +1,24 @@
+TARGETNAME=AddUser
+FILE_VIEW_ROOT_FOLDER= \
+  ReadMe.txt \
+  StdAfx.cpp \
+
+FILE_VIEW_RESOURCE_FOLDER= \
+
+FILE_VIEW_INCLUDES_FOLDER= \
+  StdAfx.h \
+
+SOURCES= \
+  AddUser.cpp \
+
+RELEASETYPE=PLATFORM
+TARGETTYPE=PROGRAM
+PRECOMPILED_CXX=1
+EXEENTRY=mainWCRTStartup
+PRECOMPILED_PCH=StdAfx.pch
+TARGETLIBS= \
+  $(_PROJECTROOT)\cesysgen\sdk\lib\$(_CPUINDPATH)\coredll.lib \
+  $(_PROJECTROOT)\cesysgen\oak\lib\$(_CPUINDPATH)\Ntlmssp.lib \
+
+PRECOMPILED_OBJ=StdAfx.obj
+PRECOMPILED_INCLUDE=StdAfx.h

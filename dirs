@@ -1,0 +1,14 @@
+!if 0
+    Copyright (c) 2005 Adeneo.  All rights reserved.
+!endif
+
+DIRS=\
+	SSHCOMPAT\
+	ZLIB\
+	SSL\	
+	SSHD\
+	SSHDevice\
+	SFTP\
+	OPENBSD_COMPAT\
+	SCP
+

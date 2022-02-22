@@ -1,0 +1,45 @@
+LIBRARY OpenBSDCompat
+
+EXPORTS
+
+DllMain
+
+snprintf
+strvis
+strnvis
+strsep
+vsnprintf
+strlcpy
+strtonum
+vasprintf
+strlcat
+strmode
+
+
+fatal
+logit
+log_init
+error
+__progname
+log_facility_number
+log_level_number
+debug
+debug2
+debug3
+verbose
+
+arc4random
+arc4random_stir
+
+inet_aton
+inet_ntop
+ssh_getaddrinfo
+ssh_freeaddrinfo
+ssh_getnameinfo
+ssh_gai_strerror
+
+b64_ntop
+b64_pton
+BSDgetopt
+BSDoptarg DATA
+BSDoptind DATA

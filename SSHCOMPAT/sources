@@ -1,0 +1,23 @@
+TARGETNAME=sshcompat
+
+SOURCES= \
+	dllmain.c\
+	strings.c\
+	file.c\
+	process.c\
+	time.c \
+	error.c \
+	syslog.c
+	
+RELEASETYPE=PLATFORM
+TARGETTYPE=DYNLINK
+
+DEFFILE=sshCompat.def
+DLLENTRY=DllMain
+
+INCLUDES = .\includes
+
+TARGETLIBS= \
+  $(_COMMONSDKROOT)\lib\$(_CPUINDPATH)\coredll.lib \
+
+FILE_VIEW_RESOURCE_FOLDER = sshCompat.def

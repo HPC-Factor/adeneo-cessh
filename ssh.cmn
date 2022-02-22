@@ -1,0 +1,39 @@
+# Copyright (c) Microsoft Corporation.  All rights reserved.
+# Use of this source code is subject to the terms of the Microsoft end-user
+# license agreement (EULA) under which you licensed this SOFTWARE PRODUCT.
+# If you did not accept the terms of the EULA, you are not authorized to use
+# this source code. For a copy of the EULA, please see the LICENSE.RTF on your
+# install media.
+
+
+SSH_PROJECT_ROOT_DIR = d:\wince500\platform\nadia2ek\SSH
+
+SSHCOMPAT_DIR=sshCompat
+BSDCOMPAT_DIR=openbsd_compat
+SSL_DIR=SSL
+SSHSERVER_DIR=SSHD	
+SFTPSERVER_DIR=SFTP
+ZLIB_DIR=zlib
+SSHDEVICE_DIR=SSHDevice
+
+
+INCLUDES = $(INCLUDES); \
+	$(SSH_PROJECT_ROOT_DIR)\includes ; \
+	$(SSH_PROJECT_ROOT_DIR)\$(SSHCOMPAT_DIR)\includes; \
+	$(SSH_PROJECT_ROOT_DIR)\$(SSL_DIR)\includes ; \
+	$(SSH_PROJECT_ROOT_DIR)\$(BSDCOMPAT_DIR)\includes; \
+	$(SSH_PROJECT_ROOT_DIR)\$(ZLIB_DIR)\includes ; \
+	$(SSH_PROJECT_ROOT_DIR)\$(SSHSERVER_DIR)\includes;\
+	$(SSH_PROJECT_ROOT_DIR)\$(SSHDEVICE_DIR)\includes
+				
+
+# libraries path
+COMMON_LIB_DIR=$(_TARGETPLATROOT)\lib\$(_CPUINDPATH)
+SSHCOMPAT_LIB=$(COMMON_LIB_DIR)\sshCompat.lib
+SSL_LIB=$(COMMON_LIB_DIR)\LIBEAY32.lib
+BSDCOMPAT_LIB=$(COMMON_LIB_DIR)\openbsdcompat.lib
+ZLIB_LIB=$(COMMON_LIB_DIR)\zlibce.lib
+
+CDEFINES = $(CDEFINES) -DMK1MF_BUILD -DMK1MF_PLATFORM_VC_CE -DOPENSSL_SMALL_FOOTPRINT -D_WIN32_WCE=500 -DUNDER_CE=500 \
+	-DOPENSSL_NO_RC5 -DOPENSSL_NO_MDC2 -DOPENSSL_NO_KRB5 -DUNICODE -D_UNICODE -DOPENSSL_SYSNAME_WINCE \
+	-DL_ENDIAN -DDSO_WIN32 -DNO_CHMOD -DOPENSSL_BUILD_SHLIBCRYPTO
