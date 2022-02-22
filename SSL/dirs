@@ -1,0 +1,52 @@
+!if 0
+    Copyright (c) 2005 Adeneo.  All rights reserved.
+!endif
+
+DIRS=\
+	aes\
+	asn1\
+	bf\
+	bio\
+	bn\
+	buffer\
+	cast\
+	comp\
+	conf\	
+	des\
+	dh\
+	dsa\
+	dso\
+	ec\
+	ecdh\
+	ecdsa\
+	engine\
+	engines\
+	err\
+	evp\
+	hmac\
+	idea\	
+	krb5\
+	lhash\
+	md2\
+	md4\
+	md5\
+	misc\	
+	objects\
+	ocsp\
+	pem\
+	pkcs12\
+	pkcs7\
+	pqueue\
+	rand\
+	rc2\
+	rc4\	
+	ripemd\
+	rsa\
+	sha\
+	stack\
+	store\
+	txt_db\
+	x509\
+	x509v3\
+	ui\
+	dll

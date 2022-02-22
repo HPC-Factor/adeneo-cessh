@@ -1,0 +1,39 @@
+# Copyright (c) Microsoft Corporation.  All rights reserved.
+# Use of this source code is subject to the terms of the Microsoft end-user
+# license agreement (EULA) under which you licensed this SOFTWARE PRODUCT.
+# If you did not accept the terms of the EULA, you are not authorized to use
+# this source code. For a copy of the EULA, please see the LICENSE.RTF on your
+# install media.
+
+
+
+!include "..\SSL.cmn"
+
+TARGETNAME=ssl_x509
+
+SOURCES= \
+		x509_def.c\
+		x509_d2.c\
+		x509_r2x.c\
+		x509_cmp.c\
+		x509_obj.c\
+		x509_req.c\
+		x509spki.c\
+		x509_vfy.c\
+		x509_set.c\
+		x509cset.c\
+		x509rset.c\
+		x509_err.c\
+		x509name.c\
+		x509_v3.c\
+		x509_ext.c\
+		x509_att.c\
+		x509type.c\
+		x509_lu.c\
+		x_all.c\
+		x509_txt.c\
+		x509_trs.c\
+		by_file.c\
+		by_dir.c\
+		x509_vpm.c\
+				
